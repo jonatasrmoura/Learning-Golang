@@ -27,11 +27,18 @@ func main() {
 	u.age = 21
 	u.active = true
 
+	func userAcitve() string {
+		if u.active {
+			return "Trabalhando"
+		}
+		return "Desligado"
+	}
+
 	pro.name = "Desenvolvedor Back-end de golang"
 	pro.wage = 7000
 
 	fmt.Println(
-		"Meu nome é", u.firstName, u.lastName, "e tenho", u.age, "anos de idade, sou", pro.name, "e ganho", pro.wage,
+		"Meu nome é", u.firstName, u.lastName, "e tenho", u.age, "anos de idade, sou", pro.name, "e ganho", pro.wage, "-", userAcitve(),
 	)
 
 	user2 := user{"Bruno", "Rosa Moura", 15, true}
